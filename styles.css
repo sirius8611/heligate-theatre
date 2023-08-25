@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300&display=swap');
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    font-family: 'Oswald', sans-serif;
+}
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    background-color: black;
+    /* width: 80% */
+  }
+.header{
+    /* background: url("./public/interstellar.jpg") no-repeat; */
+    /* background-size:cover; */
+    justify-content: center;
+    margin: 0 auto;
+} 
+.navbar{
+    display: flex;
+    margin: 0 auto;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.2em;
+    padding-top: 1.2em
+}
+.navbar-left{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.navbar-logo{
+    width: 200px;
+    margin-right: 1.2em;
+}
+.navbar-list{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 1.1em;
+    /* justify-content: space-around; */
+    
+    
+} 
+.navbar-item{
+    /* display: inline-block; */
+    /* float: right; */
+    color: white;
+    margin: 0 auto;
+
+    /* margin-left: 10px; */
+}
+.navbar-search{
+    display: inline-flex;
+    height: 2em;
+    width: 20em;
+    align-items: center;
+}
+  
+.navbar-input{
+    width:100%;
+    height: 100%;
+    margin-right: 1em;
+}
+.navbar-search-btn{
+    height: 36px;
+}
+
+/* Carousel */
+.premiere{
+    height: 60vh;
+    /* overflow:hidden; */
+    position: relative;
+    margin-bottom: 1.2em;
+}
+.carousel-img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.carousel-track-container{
+    position: relative;
+    height: 100%;
+    overflow: hidden;
+}
+.carousel-track{
+    position: relative;
+    height: 100%;
+    transition: transform 250ms ease-in;
+}
+.carousel-slide{
+    position: absolute;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+}
+.carousel-btn{
+    color: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    z-index: 1;
+    cursor: pointer
+}
+.carousel-btn--left{
+    left: 2%;
+}
+
+.carousel-btn--right{
+    right: 2%;
+}
+
+
+
+
+/* film */
+main{
+    display: grid;
+}
+.films-list{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1vw)); 
+    /* justify-content: center; */
+    /* grid-template-rows: auto; */
+    gap: 1em;
+}
+.film-title{
+    color:white;
+    text-align: center;
+}
+.film-item{
+    /* grid-column: 1; */
+}
+
+.film-poster{
+    width: 100%
+}
+.film-poster:hover + .film-info .watch-btn, .watch-btn:hover{
+    display: block;
+}
+.film-poster:hover{
+    opacity: 30%;
+}
+
+/*modal */
+dialog{
+    width: 30vw;
+    inset: 0;
+    margin: auto;
+    padding: 1em;
+}
+dialog::backdrop{
+    background-color: black;
+    opacity: .5;
+}
+.modal-film-backdrop{
+    width: 100%;
+    /* width: 50%; */
+}
+.watch-btn{
+    width: 100px;
+    height: 1em;
+}
+/* footer */
+footer{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto minmax(auto, 100px) 1fr;
+    row-gap: 1em;
+}
+.social-media-links{
+    grid-column: 1;
+    grid-row: 1;
+    display: flex;
+    /* justify-content: center; */
+}
+.social-media-link{
+    color: white;
+    margin-right: 1em;
+}
+.info-list{
+    grid-row: 2;
+    grid-column: 1/ 5;
+    gap: 0.8em 1.2em;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.company-name{
+    grid-row: 3;
+    grid-column: 1/ 5;
+    color: gray;
+    text-align: center;
+    font-weight: bold;
+}
+.info-item{
+    /* display: inline-block; */
+    color: gray;
+    /* text-align: center; */
+}
